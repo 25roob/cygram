@@ -15,13 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cygram import views
+from cygram import views as local_views
+from posts import views as posts_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello-world/', views.hello_world),
-    path('hi/', views.hi),
-    path('hi2/', views.hi2),
-    path('hi3/<str:name>/<int:age>/', views.hi3)
+    path('hello-world/', local_views.hello_world),
+    path('hi/', local_views.hi),
+    path('hi2/', local_views.hi2),
+    path('hi3/<str:name>/<int:age>/', local_views.hi3),
+
+    path('posts/', posts_views.list_posts)
 ]
