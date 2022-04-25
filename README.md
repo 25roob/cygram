@@ -5,7 +5,7 @@ A clone of Instagram made with Django **(Under construction)**
 
 Clone the repository
 
-``
+`https://github.com/25roob/cygram.git`
 
 Install the required packages
 
